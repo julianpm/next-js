@@ -17,12 +17,12 @@ export async function getStaticPaths() {
     paths: [
       {
         params: {
-          meetupId: "m1",
+          slug: "m1",
         },
       },
       {
         params: {
-          meetupId: "m2",
+          slug: "m2",
         },
       },
     ],
@@ -30,8 +30,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const slug = context.params.meetupId;
-  console.log(slug);
+  const slug = context.params.slug;
 
   return {
     props: {
